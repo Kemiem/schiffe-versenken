@@ -19,12 +19,17 @@ Die Kommunikation läuft in Echtzeit über WebSockets.
 
 ## Ordnerstruktur
 
-📦 schiffe-versenken  
- ┣ 📂 server – Node.js/TypeScript Backend (Socket.IO Server, index.ts, spätere Spiellogik)  
- ┣ 📂 client – React/TypeScript Frontend (Vite + Socket.IO Client, App.tsx)  
- ┣ 📂 docs – Projektunterlagen (Mockups, Gantt-Diagramm, Meilenstein-Dokumente)  
- ┃ ┗ 📂 mockups – Wireframes/Mockups für UI  
- ┣ 📜 README.md – Projektbeschreibung und Status  
+📦 schiffe-versenken
+┣ 📂 server → Socket.IO Server (TypeScript)
+┃ ┗ 📜 index.ts → Login-, Chat- und Verbindungslogik
+┣ 📂 client → React Frontend (Vite)
+┃ ┣ 📂 src
+┃ ┃ ┣ 📂 components → UI-Komponenten (LoginForm, ChatPanel, SystemBar, MessageList)
+┃ ┃ ┣ 📜 App.tsx → Hauptkomponente
+┃ ┃ ┣ 📜 main.tsx → Einstiegspunkt React
+┃ ┃ ┗ 📜 socket.ts → Verbindung zum Server (Socket.IO)
+┣ 📂 docs → Projektunterlagen (Mockups, Meilensteinberichte)
+┗ 📜 README.md → Projektbeschreibung
 
 ### Kurzbeschreibung
 - **server**: Enthält den Chat- und Spiel-Server. Läuft auf Node.js/TypeScript und kommuniziert per WebSockets (Socket.IO).  
@@ -37,6 +42,22 @@ Die Kommunikation läuft in Echtzeit über WebSockets.
 - README, Mockups und Gantt-Diagramm hinzugefügt.
 - Erste Chat-Implementierung: Client kann Nachrichten an den Server senden, Server bestätigt / broadcastet.
 - Technologien aufgesetzt: Node.js/TypeScript im Server, React/TypeScript im Client.
+
+
+## Status Meilenstein 2
+- Login-System mit Nickname umgesetzt (inkl. Validierung).
+- Echtzeit-Chat mit Socket.IO zwischen allen eingeloggten Benutzern implementiert.
+- Anzeige der aktuellen Spielerliste mit automatischer Aktualisierung bei Login/Logout.
+- Folgende Frontend-Komponenten erstellt:
+   - LoginForm.tsx → Loginmaske mit Statusmeldungen
+   - ChatPanel.tsx → Anzeige und Eingabe von Chatnachrichten
+   - SystemBar.tsx → Verbindungsstatus (z. B. "Verbunden")
+   - MessageList.tsx → Darstellung des Chatverlaufs
+- Serverseitige Verwaltung der Benutzer in einer In-Memory-Liste.
+- Chatnachrichten werden an alle Clients gesendet und direkt angezeigt.
+- Verbindung zwischen Frontend (Port 5173) und Backend (Port 3000) funktioniert zuverlässig.
+- Grundlage für die spätere Spiellogik ist vorbereitet.
+
 
 
 
