@@ -36,6 +36,10 @@ Die Kommunikation läuft in Echtzeit über WebSockets.
 - **client**: React/TypeScript-Frontend, das die UI darstellt und Nachrichten an den Server sendet.  
 - **docs**: Dokumentation (Mockups, Gantt-Diagramm, Meilensteinberichte).  
 
+## Kurzanleitung
+- Server starten (Server läuft dann auf http://localhost:3000/)
+- Client starten
+
 ## Status Meilenstein 1
 
 - Projektstruktur erstellt (server, client, docs).
@@ -57,6 +61,8 @@ Die Kommunikation läuft in Echtzeit über WebSockets.
 - Chatnachrichten werden an alle Clients gesendet und direkt angezeigt.
 - Verbindung zwischen Frontend (Port 5173) und Backend (Port 3000) funktioniert zuverlässig.
 - Grundlage für die spätere Spiellogik ist vorbereitet.
+
+
 
 
 
